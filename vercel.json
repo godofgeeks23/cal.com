@@ -1,0 +1,8 @@
+{
+    "functions": {
+      "api/auth/reset-password": {
+        "memory": 1024,
+        "maxDuration": 60
+      }
+    }
+  }

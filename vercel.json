@@ -1,11 +1,7 @@
 {
     "functions": {
-      "apps/web/pages/api/auth/reset-password": {
-        "memory": 1024,
-        "maxDuration": 60
-      },
-      "apps/web/pages/api/**/*": {
-        "excludeFiles": "apps/web/public/**"
-      }
+        "api/**/*": {
+            "excludeFiles": "apps/web/public/**"
+        }
     }
-  }
+}

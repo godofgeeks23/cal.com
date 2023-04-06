@@ -5,7 +5,7 @@
         "maxDuration": 60
       },
       "pages/**/*": {
-        "excludeFiles": "public/**"
+        "excludeFiles": "apps/web/public/**"
       }
     }
   }

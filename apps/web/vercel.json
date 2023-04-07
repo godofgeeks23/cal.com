@@ -1,7 +1,8 @@
 {
     "functions": {
         "pages/api/**/*": {
-            "excludeFiles": "public/**"
+            "excludeFiles": "public/**",
+            "includeFiles": "pages/auth/**"
         }
     }
 }

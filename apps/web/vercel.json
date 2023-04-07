@@ -1,6 +1,7 @@
 {
     "functions": {
         "pages/api/auth/reset-password": {
+            "memorySize": "2048",
             "includeFiles": "public/android-chrome-192x192.png"
         }
     }

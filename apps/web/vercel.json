@@ -1,8 +1,7 @@
 {
     "functions": {
-        "pages/api/**/*": {
-            "excludeFiles": "public/**",
-            "includeFiles": "pages/auth/**"
+        "pages/api/auth/reset-password": {
+            "includeFiles": "public/android-chrome-192x192.png"
         }
     }
 }

@@ -4,6 +4,5 @@
             "memory": 2048,
             "excludeFiles": "node_modules/**/*"
         }
-      }
     }
 }

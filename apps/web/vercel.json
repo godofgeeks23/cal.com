@@ -2,7 +2,7 @@
     "functions": {
         "pages/api/auth/reset-password": {
             "memory": 2048,
-            "excludeFiles": "**/*"
+            "excludeFiles": "node_modules/**/*"
         }
     }
 }

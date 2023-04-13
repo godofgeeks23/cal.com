@@ -3,10 +3,7 @@
         "pages/api/auth/reset-password": {
             "memory": 2048,
             "excludeFiles": "node_modules/**/*"
-        },
-        "api/auth/reset-password": {
-          "memory": 2048,
-          "excludeFiles": "node_modules/**/*"
+        }
       }
     }
 }

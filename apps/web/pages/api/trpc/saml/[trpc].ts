@@ -3,17 +3,20 @@
  */
 import { z } from "zod";
 
+import { getServerSession } from "@calcom/features/auth/lib/getServerSession";
 import * as trpcNext from "@calcom/trpc/server/adapters/next";
 import { createContext as createTrpcContext } from "@calcom/trpc/server/createContext";
-import { publicViewerRouter } from "@calcom/trpc/server/routers/publicViewer/_router";
+import { ssoRouter } from "@calcom/trpc/server/routers/viewer/sso/_router";
 
 export default trpcNext.createNextApiHandler({
-  router: publicViewerRouter,
+  router: ssoRouter,
   /**
    * @link https://trpc.io/docs/context
    */
   createContext: ({ req, res }) => {
-    return createTrpcContext({ req, res });
+    const sessionGetter = () => getServerSession({ req, res });
+
+    return createTrpcContext({ req, res }, sessionGetter);
   },
   /**
    * @link https://trpc.io/docs/error-handling
@@ -34,7 +37,6 @@ export default trpcNext.createNextApiHandler({
    * @link https://trpc.io/docs/caching#api-response-caching
    */
   responseMeta({ ctx, paths, type, errors }) {
-
     // Some helpers relevant to this function only
     const ONE_DAY_IN_SECONDS = 60 * 60 * 24;
     // assuming you have all your public routes with the keyword `public` in them
